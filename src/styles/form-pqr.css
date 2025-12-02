@@ -1,3 +1,6 @@
+/* ============================================
+   CONTENEDOR FORMULARIO
+============================================ */
 .form-pqr {
   max-width: 700px;
   margin: 40px auto;
@@ -7,6 +10,7 @@
   border-radius: 20px;
 }
 
+/* LOGO */
 .logo-div {
   text-align: center;
   margin-bottom: 10px;
@@ -16,6 +20,7 @@
   width: 100px;
 }
 
+/* TÍTULO PRINCIPAL */
 .form-pqr h2 {
   text-align: center;
   font-size: 24px;
@@ -24,7 +29,9 @@
   color: #503629;
 }
 
-/* SECCIÓN */
+/* ============================================
+   SECCIÓN TARJETA
+============================================ */
 .section-card {
   background: #fff;
   border: 2px solid #f5d7ba;
@@ -50,7 +57,9 @@
   display: block;
 }
 
-/* INPUTS */
+/* ============================================
+   INPUTS / SELECT / TEXTAREA
+============================================ */
 .form-pqr input,
 .form-pqr select,
 .form-pqr textarea {
@@ -76,11 +85,35 @@ textarea::placeholder {
   background: #fffaf6;
 }
 
-/* CHIPS */
+/* ============================================
+   CAMPOS CON ERROR (VALIDACIÓN)
+============================================ */
+.input-error {
+  border-color: #d9534f !important;
+  background: #ffe9e8 !important;
+}
+
+/* Mensaje pequeño (opcional si lo quieres usar) */
+.error-text {
+  font-size: 13px;
+  margin-top: 2px;
+  color: #d9534f;
+}
+
+/* TEXTAREA */
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* ============================================
+   CHIPS (Franquicia / Pago en efectivo)
+============================================ */
 .chip-group {
   display: flex;
   gap: 10px;
   margin-top: 6px;
+  flex-wrap: wrap;
 }
 
 .chip {
@@ -91,44 +124,152 @@ textarea::placeholder {
   cursor: pointer;
   font-weight: 600;
   color: #503629;
+  transition: 0.2s;
+}
+
+.chip:hover {
+  background: #e3ceb8;
 }
 
 .chip-selected {
-  background: #e0b173;
-  border-color: #c7863a;
+  background: #e0b173 !important;
+  border-color: #c7863a !important;
   color: #503629;
-}
-
-/* TEXTAREA */
-textarea {
-  min-height: 80px;
-  resize: vertical;
-}
-
-/* BUTTON */
-.btn-enviar, .btn-admin {
-  margin-top: 25px;
-  width: 100%;
-  background: #c8a98c;
-  color: #fff;
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  font-size: 18px;
   font-weight: 700;
-  cursor: pointer;
 }
 
+/* CHIP ERROR para validación */
+.chip-error {
+  border: 2px solid #d9534f !important;
+  background: #ffe9e8 !important;
+}
+
+/* ============================================
+   BOTONES
+============================================ */
+
+.top-right-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  /* Evita que ocupe todo el ancho */
+  width: auto;
+
+  /* Asegura que el contenedor padre permita posición absoluta */
+  z-index: 1000;
+}
+
+
+.btn-enviar,
+.btn-admin {
+  display: inline-block;
+  background: var(--cafe);
+  color: #fff;
+  padding: 10px 18px; 
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s;
+  width: auto; /* NO full-width */
+}
+.btn-admin:hover {
+  background: var(--oro3);
+}
 .btn-enviar:hover {
   background: #b28968;
 }
 
-/* MENSAJE */
-.msg {
-  background: #fff4e4;
-  padding: 12px;
-  font-weight: 700;
-  border-left: 5px solid #e3a85b;
-  border-radius: 8px;
-  margin-bottom: 15px;
+
+/* ============================================
+   MODAL PROFESIONAL
+============================================ */
+.modalPQR-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  z-index: 5000;
+  backdrop-filter: blur(3px);
+  animation: fadeIn 0.25s ease-out;
+}
+
+.modalPQR-box {
+  background: #ffffff;
+  padding: 30px 25px;
+  width: 95%;
+  max-width: 420px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+  animation: scaleUp 0.22s ease-out;
+  border: 2px solid #e3ccb0;
+}
+
+/* Icono circular */
+.modalPQR-icon {
+  width: 65px;
+  height: 65px;
+  margin: 0 auto 15px auto;
+  border-radius: 50%;
+  font-size: 30px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalPQR-icon.success {
+  background: #48bb78;   /* verde éxito */
+}
+
+.modalPQR-icon.error {
+  background: #e53935;   /* rojo error */
+}
+
+.modalPQR-title {
+  font-size: 22px;
+  color: #503629;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.modalPQR-message {
+  font-size: 16px;
+  color: #6a5649;
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.modalPQR-btn {
+  background: #EAAF4E;
+  color: #503629;
+  font-weight: 800;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s ease;
+  font-size: 16px;
+}
+
+.modalPQR-btn:hover {
+  background: #CF9644;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleUp {
+  from { transform: scale(0.85); }
+  to   { transform: scale(1); }
 }
