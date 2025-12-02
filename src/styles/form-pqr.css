@@ -1,0 +1,134 @@
+.form-pqr {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #f7efea;
+  border: 2px solid #c8a98c;
+  border-radius: 20px;
+}
+
+.logo-div {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.logo-div img {
+  width: 100px;
+}
+
+.form-pqr h2 {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: 800;
+  color: #503629;
+}
+
+/* SECCIÓN */
+.section-card {
+  background: #fff;
+  border: 2px solid #f5d7ba;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 18px;
+}
+
+.section-card h3 {
+  font-size: 18px;
+  font-weight: 800;
+  color: #503629;
+  margin-bottom: 12px;
+  border-bottom: 2px solid #e8d3bd;
+  padding-bottom: 4px;
+}
+
+/* LABEL */
+.form-pqr label {
+  font-weight: 700;
+  color: #503629;
+  margin-top: 12px;
+  display: block;
+}
+
+/* INPUTS */
+.form-pqr input,
+.form-pqr select,
+.form-pqr textarea {
+  width: 100%;
+  padding: 11px;
+  margin-top: 5px;
+  border-radius: 8px;
+  background: #fff;
+  border: 2px solid #d2b7a5;
+  font-size: 15px;
+  color: #503629;
+}
+
+.form-pqr input::placeholder,
+textarea::placeholder {
+  color: #b49a87;
+}
+
+.form-pqr input:focus,
+.form-pqr textarea:focus,
+.form-pqr select:focus {
+  border-color: #d89a53;
+  background: #fffaf6;
+}
+
+/* CHIPS */
+.chip-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.chip {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #efe1d3;
+  border: 2px solid #d2b7a5;
+  cursor: pointer;
+  font-weight: 600;
+  color: #503629;
+}
+
+.chip-selected {
+  background: #e0b173;
+  border-color: #c7863a;
+  color: #503629;
+}
+
+/* TEXTAREA */
+textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+/* BUTTON */
+.btn-enviar, .btn-admin {
+  margin-top: 25px;
+  width: 100%;
+  background: #c8a98c;
+  color: #fff;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn-enviar:hover {
+  background: #b28968;
+}
+
+/* MENSAJE */
+.msg {
+  background: #fff4e4;
+  padding: 12px;
+  font-weight: 700;
+  border-left: 5px solid #e3a85b;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}

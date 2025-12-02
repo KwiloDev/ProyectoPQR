@@ -1,0 +1,27 @@
+.tabla {
+  width: 100%;
+  background: var(--blanco);
+  border-collapse: collapse;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.10);
+}
+
+.tabla th {
+  background: var(--oro2);
+  color: var(--cafe);
+  padding: 12px;
+  font-size: 15px;
+  border-bottom: 2px solid var(--oro1);
+  font-weight: 800;
+}
+
+.tabla td {
+  padding: 12px;
+  border-bottom: 1px solid #f3e7d9;
+}
+
+.tabla tr:hover {
+  background: var(--crema1);
+}

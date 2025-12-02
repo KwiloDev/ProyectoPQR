@@ -1,0 +1,54 @@
+.filtros-card {
+  background: var(--blanco);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  margin-bottom: 25px;
+  border: 3px solid var(--oro2);
+}
+
+.filtros-card h3 {
+  font-family: var(--font-bold);
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.filtros-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  margin-top: 15px;
+}
+
+.filtros-card label {
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.filtros-card input,
+.filtros-card select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid var(--oro3);
+  background: var(--crema1);
+  color: var(--cafe);
+  font-size: 15px;
+}
+
+.btn-buscar {
+  background: var(--oro1);
+  border: none;
+  padding: 12px 25px;
+  font-weight: 800;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 20px;
+  color: var(--cafe);
+  transition: 0.2s;
+}
+
+.btn-buscar:hover {
+  background: var(--oro3);
+}

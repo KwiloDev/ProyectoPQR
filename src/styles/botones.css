@@ -1,0 +1,30 @@
+.btn-excel {
+  background: #1a7f39;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: 0.2s;
+}
+
+.btn-excel:hover {
+  background: #13652c;
+}
+
+.btn-actualizar {
+  background: var(--oro3);
+  color: var(--cafe);
+  padding: 10px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  border: none;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.btn-actualizar:hover {
+  background: var(--oro1);
+}

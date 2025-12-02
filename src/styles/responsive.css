@@ -1,0 +1,6 @@
+@media (max-width: 768px) {
+  .tabla td, .tabla th {
+    font-size: 13px;
+    padding: 8px;
+  }
+}

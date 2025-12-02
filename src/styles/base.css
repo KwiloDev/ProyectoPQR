@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--crema2);
+  font-family: "Nunito", sans-serif;
+  color: var(--cafe);
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--cafe);
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 30px;
+}
