@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { formatNumber, parseNumber } from "../utils/formatMoney";
 
 export default function FormPQR() {
   const [form, setForm] = useState({
@@ -36,6 +37,10 @@ export default function FormPQR() {
       [name]: type === "checkbox" ? checked : value,
     });
   };
+const handleValorTransaccion = (e) => {
+  const raw = parseNumber(e.target.value); // quita puntos
+  setForm({ ...form, valor_transaccion: raw });
+};
 
   // ----------------------------
   //  VALIDACIÓN PROFESIONAL
@@ -245,13 +250,14 @@ export default function FormPQR() {
         </select>
 
         <label>Valor de la transacción:</label>
-        <input
-          type="number"
-          name="valor_transaccion"
-          className={errors.valor_transaccion ? "input-error" : ""}
-          value={form.valor_transaccion}
-          onChange={handleChange}
-        />
+<input
+  type="text"
+  name="valor_transaccion"
+  className={errors.valor_transaccion ? "input-error" : ""}
+  value={formatNumber(form.valor_transaccion)}
+  onChange={handleValorTransaccion}
+/>
+
 
         <label>Fecha de la transacción:</label>
         <input

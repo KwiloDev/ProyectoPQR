@@ -8,10 +8,10 @@ export default function App() {
       <Routes>
 
         {/* Página principal: formulario para diligenciar */}
-        <Route path="/PQR" element={<PageForm />} />
+        <Route path="/" element={<PageForm />} />
 
         {/* Panel administrativo */}
-        <Route path="/PQR/admin" element={<PageAdmin />} />
+        <Route path="/admin" element={<PageAdmin />} />
 
       </Routes>
     </BrowserRouter>

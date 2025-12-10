@@ -3,7 +3,7 @@ import FiltrosPQR from "../components/FiltrosPQR";
 import TablaPQR from "../components/TablaPQR";
 import ExportarExcel from "../components/ExportarExcel";
 import { Link } from "react-router-dom";
-
+import { formatNumber } from "../utils/formatMoney";
 export default function PageAdmin() {
   const [auth, setAuth] = useState(() => {
   return localStorage.getItem("pqr_admin_auth") === "true";
@@ -52,7 +52,7 @@ export default function PageAdmin() {
   return (
     <div className="admin-login-container">
 
-      <Link to="/PQR" className="btn-admin back-btn">
+      <Link to="/" className="btn-admin back-btn">
         ← Volver al formulario
       </Link>
 
@@ -133,7 +133,7 @@ export default function PageAdmin() {
                 <td>{p.attributes.centro_operacion}</td>
                 <td>{p.attributes.nombre_cliente}</td>
                 <td>{p.attributes.telefono}</td>
-                <td>{p.attributes.valor_transaccion}</td>
+                <td>{formatNumber(p.attributes.valor_transaccion)}</td>
                 <td>{p.attributes.franquicia}</td>
                 <td>{p.attributes.ultimos4}</td>
                 <td>{p.attributes.banco_emisor}</td>
