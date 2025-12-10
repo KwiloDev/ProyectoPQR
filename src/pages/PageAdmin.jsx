@@ -23,7 +23,7 @@ export default function PageAdmin() {
   const login = (e) => {
     e.preventDefault();
 
-    const realPass = import.meta.env.VITE_ADMIN_PASS;
+    const realPass = import.meta.env.VITE_ADMIN_PASS||"Crepes2025";
 
     if (pass === realPass) {
       localStorage.setItem("pqr_admin_auth", "true");
