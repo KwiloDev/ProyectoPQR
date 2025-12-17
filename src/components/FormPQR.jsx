@@ -43,7 +43,7 @@ const handleValorTransaccion = (e) => {
 };
 
   // ----------------------------
-  //  VALIDACIÓN PROFESIONAL
+  //  VALIDACIÓN 
   // ----------------------------
   const validarFormulario = () => {
     let newErrors = {};
